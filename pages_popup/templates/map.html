@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}Map{% endblock %}
+
+{% block content %}
+    <h1>Map밀 Page</h1>
+    <table id="farm-grid">
+        <tbody>
+            <!-- JavaScript will populate this -->
+        </tbody>
+    </table>
+    
+
+    
+    <!-- Modal Structure -->
+    <div id="info-modal" class="modal">
+        <div class="info-content">
+            <span class="close">&times;</span>
+
+            <p id="info-text">클릭.</p>
+        </div>
+    </div>
+
+    <!-- Include the JavaScript file only once -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+{% endblock %}
